@@ -32,6 +32,7 @@ body{
 .card-section{
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 60px;
 }
 .card{
@@ -46,24 +47,53 @@ body{
 .card:not(:last-child){
     margin-right: 30px;
 }
-.card-title{
-    font-size: 20px;
-    font-weight: 600;
-    
-}
-.card-text{
-    margin-top: 20px;
-    font-weight: 400;
-    line-height: 24px;
-    color: #ADACB1;
-}
-.card-img{
+.supervisor .card-text::after{
+    content: "";
+    background: url('../images/icon-supervisor.svg') no-repeat;
+    width: 70px;
+    height: 70px;
     position: absolute;
     right: 20px;
     bottom: 20px;
 }
+.team .card-text::after{
+    content: "";
+    background: url('../images/icon-team-builder.svg') no-repeat;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.karma .card-text::after{
+    content: "";
+    background: url('../images/icon-karma.svg') no-repeat;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.calculator .card-text::after{
+    content: "";
+    background: url('../images/icon-calculator.svg') no-repeat;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.card-title{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.card-text{
+    font-weight: 400;
+    line-height: 24px;
+    color: #ADACB1;
+}
 .supervisor{
-    margin-top: 150px;
     border-top: 4px solid #5FC5C7;
 }
 .team{
@@ -74,6 +104,5 @@ body{
     border-top: 4px solid hsl(34, 97%, 64%);
 }
 .calculator{
-    margin-top: 150px;
     border-top: 4px solid hsl(212, 86%, 64%);
 }
